@@ -14,6 +14,7 @@ def main():
         "README.md",
         "README_CN.md",
         "WEB_SETUP_CN.md",
+        "assets/icon.svg",
         "skills/experiment-paper-grill/SKILL.md",
     ]
     for relative in required:
@@ -32,7 +33,7 @@ def main():
             and "__pycache__" not in path.parts
         )
 
-    output = root / "dist" / (
+    output = root.parent / "plugin-packages" / (
         f"{manifest['name']}-plugin-{manifest['version']}.zip"
     )
     output.parent.mkdir(exist_ok=True)

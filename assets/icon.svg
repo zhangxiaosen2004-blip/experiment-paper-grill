@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <title>Experiment Paper Grill</title>
+  <rect x="2" y="2" width="124" height="124" rx="26" fill="#f1f5f9"/>
+  <g fill="none" stroke="#334155" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M30 23h39l17 17v24M30 23v77h24M69 23v19h17M43 55h27M43 69h18"/>
+    <circle cx="84" cy="87" r="24" fill="#fff"/>
+    <path d="M77 80a7 7 0 1 1 11 6c-3 2-4 3-4 6"/>
+  </g>
+  <circle cx="84" cy="100" r="3" fill="#334155"/>
+</svg>

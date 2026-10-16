@@ -33,7 +33,7 @@
 python scripts/build_plugin.py
 ```
 
-输出为 `dist/experiment-paper-grill-plugin-1.0.0.zip`，其中 `plugin.json` 位于 ZIP 根目录。它用于插件打包与提交，向普通聊天附加 ZIP 不会自动安装插件。
+输出位于仓库同级的 `plugin-packages/experiment-paper-grill-plugin-1.0.0.zip`，其中 `plugin.json` 位于 ZIP 根目录。它用于插件打包与提交，向普通聊天附加 ZIP 不会自动安装插件。
 
 如需面向所有人公开分发，可将此包提交到 OpenAI 插件发布平台。发布身份、权限、自动检查和审核结果，以平台实际要求为准。GitHub 公开仓库与 ChatGPT 插件目录是独立的发布渠道。
 
