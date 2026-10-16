@@ -1,6 +1,6 @@
 ---
 name: experiment-paper-grill
-description: Relentlessly interview the user about the scientific content of experiments and manuscript text to verify that they understand, can justify, and can accurately explain every scientific claim they intend to present in a paper. Use when reviewing AI-assisted experiments, black-box agent workflows, manuscript drafts, formulas, methods, results, or when simulating an internal lab review, advisor questioning, or reviewer interrogation.
+description: Relentlessly interview the user about the scientific content of experiments and manuscript text, calibrated to a researched target journal or conference, to verify that they understand, can justify, and can accurately explain every scientific claim they intend to present. Use when reviewing AI-assisted experiments, black-box agent workflows, manuscript drafts, formulas, methods, results, or when simulating an internal lab review, advisor questioning, or venue-informed reviewer interrogation.
 ---
 
 # Experiment–Paper Grill
@@ -17,6 +17,121 @@ The purpose is not to test memory of every implementation detail or every numeri
 - distinguish observation, mechanism, inference, assumption, and speculation;
 - defend the manuscript under questioning from an advisor, collaborator, or reviewer;
 - maintain academic integrity when experiments were partially completed with AI agents or automated tools.
+
+## Journal Calibration Phase
+
+Before beginning substantive grilling, establish the intended publication context.
+
+The first unresolved question of a new review session should normally be:
+
+> What is the target journal or conference for this manuscript?
+
+If the user has not selected a single venue, ask for the most likely target venue, shortlist, or disciplinary audience.
+
+Once the target venue is known, research it before beginning the scientific interrogation.
+
+### Required venue research
+
+Use current external sources when available. Prefer primary and authoritative sources.
+
+Investigate:
+
+1. the official aims and scope;
+2. article types relevant to the manuscript;
+3. author guidelines and methodological or reporting requirements;
+4. publicly available reviewer or editorial criteria;
+5. recent editorials, calls, special issues, or policy statements that reveal evaluation priorities;
+6. a representative sample of recent papers similar in topic, method, or disciplinary combination;
+7. the level of domain background that papers in the venue normally assume;
+8. the typical balance between methodological novelty, scientific novelty, application value, and generality;
+9. the expected strength of evidence, validation, ablation, uncertainty analysis, or statistical support;
+10. recurring expectations around reproducibility, data availability, code availability, ethics, reporting standards, and limitations when relevant.
+
+Do not invent reviewer preferences that are not supported by evidence.
+
+Distinguish clearly between:
+
+- explicit journal policy;
+- patterns observed in recent papers;
+- reasonable inference about likely reviewer priorities.
+
+If evidence about the journal's review style is limited, state that uncertainty and use a conservative venue-informed reviewer profile.
+
+### Build a venue-specific reviewer profile
+
+Before grilling the manuscript, form an internal reviewer profile containing:
+
+- primary disciplinary audience;
+- likely secondary or interdisciplinary audience;
+- expected assumed knowledge;
+- likely novelty threshold;
+- expected methodological depth;
+- expected validation depth;
+- likely sensitivity to overclaiming;
+- likely sensitivity to missing baselines or controls;
+- likely expectations for explanation of formulas and mechanisms;
+- likely expectations for reproducibility;
+- likely tolerance for implementation details that are peripheral to the scientific contribution;
+- likely points where an interdisciplinary reviewer may need additional explanation.
+
+Use this profile to allocate questioning depth.
+
+### Interdisciplinary calibration
+
+For interdisciplinary manuscripts, avoid over-grilling material that the target venue normally treats as supporting background.
+
+Classify major content into three levels:
+
+#### Core contribution
+Material central to the manuscript's novelty, validity, or main scientific claim.
+
+Grill deeply.
+
+#### Supporting technical content
+Material needed to understand or reproduce the work, but outside the primary contribution.
+
+Verify that the user can explain the scientific role, assumptions, and consequences. Do not demand specialist-level mastery unless the venue is likely to require it.
+
+#### Peripheral domain content
+Material imported from another discipline mainly as context, implementation infrastructure, or a standard tool.
+
+Check that the user understands enough to use and describe it responsibly. Avoid specialist interrogation that would be atypical for the target venue.
+
+When a manuscript crosses disciplines, calibrate questions to what a plausible reviewer from the venue could reasonably be expected to examine.
+
+Do not assume every reviewer is expert in every contributing discipline.
+
+### Reviewer-style simulation
+
+Simulate likely reviewer priorities and questioning style for the target venue.
+
+This simulation should reflect:
+
+- the venue's scope;
+- published evaluation norms;
+- recent comparable papers;
+- the manuscript's article type;
+- the manuscript's disciplinary mix.
+
+Do not impersonate a specific real reviewer or claim certainty about how an actual reviewer would respond.
+
+The goal is to approximate the review pressure the manuscript is likely to encounter.
+
+### Venue profile summary
+
+Before the first substantive grill question, briefly summarize the venue profile for the user.
+
+The summary should normally include:
+
+- what the venue appears to value most;
+- what level of methodological explanation is likely expected;
+- what kinds of claims are likely to attract scrutiny;
+- how interdisciplinary depth will be calibrated;
+- which parts of the manuscript are likely to receive the strongest questioning.
+
+Keep this summary concise enough that the review can proceed efficiently.
+
+After the venue profile is established, begin the one-question-at-a-time scientific grilling workflow.
 
 ## Core Interaction Rule
 
@@ -346,10 +461,13 @@ When such a risk appears, state it clearly and continue interrogating that branc
 
 At the beginning of a review session:
 
-1. identify the manuscript section, claim, experiment, figure, formula, or result currently under review;
-2. inspect all relevant supplied materials;
-3. identify the most important scientific claim;
-4. begin from that claim and trace downward through its evidence and assumptions.
+1. identify the target journal, conference, or intended disciplinary venue;
+2. research the venue and build the venue-specific reviewer profile;
+3. summarize the resulting review calibration for the user;
+4. identify the manuscript section, claim, experiment, figure, formula, or result currently under review;
+5. inspect all relevant supplied materials;
+6. identify the most important scientific claim under that venue's likely evaluation criteria;
+7. begin from that claim and trace downward through its evidence and assumptions.
 
 A typical interrogation path is:
 

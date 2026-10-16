@@ -1,5 +1,7 @@
 # Experiment Paper Grill
 
+[中文 README](README_CN.md)
+
 A research-review skill for interrogating the scientific understanding behind AI-assisted experiments and manuscript writing.
 
 Its purpose is to simulate an internal lab review, advisor questioning, or reviewer-style discussion so that the author can verify they genuinely understand the scientific content they plan to claim in a paper.
@@ -28,6 +30,27 @@ It asks whether the author can explain:
 - formulas, variables, and their role in the argument;
 - how to defend the paper under follow-up questioning.
 
+## Venue-calibrated review
+
+Before substantive grilling begins, the skill asks for the intended target journal, conference, or disciplinary venue.
+
+It then researches the venue using current authoritative sources and builds a venue-specific reviewer profile. The profile considers:
+
+- aims and scope;
+- article type;
+- author and reporting guidelines;
+- public reviewer or editorial criteria;
+- recent comparable papers;
+- expected methodological and validation depth;
+- likely novelty standards;
+- likely sensitivity to overclaiming;
+- reproducibility expectations;
+- the level of background knowledge normally assumed.
+
+For interdisciplinary work, the skill separates content into core contribution, supporting technical content, and peripheral domain content. Questioning depth is calibrated accordingly so that supporting material from a secondary discipline is not subjected to an unrealistic specialist-level interrogation unless the target venue would reasonably demand it.
+
+The resulting behavior is a venue-informed reviewer simulation. It approximates likely review pressure without pretending to know the preferences of any specific real reviewer.
+
 ## Core behavior
 
 The skill follows a strict one-question-at-a-time review loop.
@@ -48,12 +71,14 @@ The skill deliberately avoids asking the user to memorize every experimental num
 ```text
 experiment-paper-grill/
 ├── README.md
+├── README_CN.md
 ├── CODEX_TASK.md
 ├── .gitignore
 ├── skills/
 │   └── experiment-paper-grill/
 │       └── SKILL.md
 └── examples/
+    ├── journal-calibrated-review.md
     ├── manuscript-review.md
     ├── black-box-experiment.md
     └── formula-review.md
@@ -77,7 +102,7 @@ Provide a manuscript section together with the relevant experiment notes, figure
 
 Then invoke the skill with an instruction such as:
 
-> Grill me on the scientific content of this section. Focus on whether I can correctly explain and defend the claims in the paper.
+> My target journal is [journal name]. Research the journal first, then grill me on the scientific content of this section at the depth and style that would be plausible for reviewers there.
 
 ### Black-box experiment
 

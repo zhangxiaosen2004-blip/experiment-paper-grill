@@ -14,7 +14,7 @@ Suggested description:
 
 ## Required checks before push
 
-1. Read `README.md`.
+1. Read `README.md` and `README_CN.md`.
 2. Read `skills/experiment-paper-grill/SKILL.md`.
 3. Confirm the repository contains no secrets, credentials, generated caches, or machine-specific paths.
 4. Preserve the current directory structure.
@@ -46,3 +46,12 @@ Do not weaken these core rules in `SKILL.md`:
 - verify formula understanding;
 - distinguish observation, analysis, interpretation, mechanism, generalization, and limitation;
 - continue until shared understanding is reached.
+
+## Venue calibration rules that must be preserved
+
+- ask for the target journal or venue before substantive grilling;
+- research the venue before building the reviewer simulation;
+- distinguish explicit venue policy from patterns in recent papers and from inference;
+- calibrate questioning depth to the venue and manuscript's disciplinary mix;
+- avoid unrealistic specialist-level interrogation of peripheral interdisciplinary content;
+- preserve the one-question-at-a-time workflow after calibration.
