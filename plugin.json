@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "experiment-paper-grill",
+  "version": "1.0.0",
+  "description": "Journal-calibrated scientific review of experiments, manuscript claims, and formulas, one question at a time.",
+  "author": {
+    "name": "zhangxiaosen2004-blip",
+    "url": "https://github.com/zhangxiaosen2004-blip"
+  },
+  "homepage": "https://github.com/zhangxiaosen2004-blip/experiment-paper-grill",
+  "repository": "https://github.com/zhangxiaosen2004-blip/experiment-paper-grill",
+  "license": "MIT",
+  "keywords": ["research", "manuscript-review", "peer-review", "scientific-reasoning"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Experiment Paper Grill",
+        "shortDescription": "Scientific questioning calibrated to your target journal.",
+        "longDescription": "Review the scientific understanding behind experiments, manuscript claims, and formulas. Research the target journal first, calibrate interdisciplinary depth, inspect supplied evidence, and ask one question at a time with a concise answer direction.",
+        "developerName": "zhangxiaosen2004-blip",
+        "category": "Productivity",
+        "websiteURL": "https://github.com/zhangxiaosen2004-blip/experiment-paper-grill",
+        "defaultPrompt": [
+          "我的目标期刊是 Nature Communications。先调研期刊，再根据我上传的论文和实验材料，一次只问一个科学问题。",
+          "Review my formula and manuscript context. First establish the target venue, then question my scientific understanding one question at a time."
+        ]
+      }
+    }
+  }
+}

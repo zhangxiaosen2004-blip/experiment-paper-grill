@@ -6,6 +6,10 @@
 
 [English README](README.md)
 
+## 网页版 ChatGPT 插件
+
+仓库已提供纯 skill 插件封装。可通过 [网页版使用说明](WEB_SETUP_CN.md) 在开放了 Plugin Creator 的账号或工作区创建私人插件，也可以生成标准提交 ZIP。当前尚未完成网页版账号安装和实际对话验证。
+
 ## 这个 skill 适合什么场景
 
 这个 skill 主要面向以下工作流：

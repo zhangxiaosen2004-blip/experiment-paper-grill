@@ -2,6 +2,8 @@
 
 [中文 README](README_CN.md)
 
+This repository also packages the skill as a skills-only Agent Plugins plugin. See [ChatGPT web setup](WEB_SETUP_CN.md) for creating a private plugin through Plugin Creator and for building a standard submission ZIP. Web availability depends on the account and workspace. The package has not yet been installed or tested in ChatGPT web.
+
 A research-review skill for interrogating the scientific understanding behind AI-assisted experiments and manuscript writing.
 
 Its purpose is to simulate an internal lab review, advisor questioning, or reviewer-style discussion so that the author can verify they genuinely understand the scientific content they plan to claim in a paper.
